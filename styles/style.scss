@@ -21,13 +21,13 @@ h1 {
 h2 {
   font-size: 6rem;
   font-family: "Shadows Into Light", cursive;
-  color: rgb(31, 219, 31);
+  color: #2DE2E6;
 }
 
 h3 {
   font-size: 4rem;
   font-family: "Shadows Into Light", cursive;
-  color: rgb(31, 219, 31);
+  color: #FF3864;
 }
 
 h4 {
@@ -44,3 +44,4 @@ a {
   text-decoration: none;
 }
 @import "home";
+@import "projects";
