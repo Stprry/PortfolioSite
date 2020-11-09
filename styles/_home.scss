@@ -47,7 +47,7 @@ nav {
 .pageContent {
   display: grid;
   min-height: 90vh;
-  max-height: 95vh;
+  max-height: 90vh;
   grid-template-columns: 10% repeat(5, minmax(5rem, 1fr)) 10%;
   grid-template-rows: 1fr 2fr 1fr;
 

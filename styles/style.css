@@ -117,7 +117,7 @@ nav .contactBtn {
   display: -ms-grid;
   display: grid;
   min-height: 90vh;
-  max-height: 95vh;
+  max-height: 90vh;
   -ms-grid-columns: 10% (minmax(5rem, 1fr))[5] 10%;
       grid-template-columns: 10% repeat(5, minmax(5rem, 1fr)) 10%;
   -ms-grid-rows: 1fr 2fr 1fr;
