@@ -1,40 +1,100 @@
-.projects-container {
+.card-container {
   background: linear-gradient(#141414, #261447);
   position: relative;
   z-index: 0;
   overflow: hidden;
+  padding: 5rem;
 }
-.projects {
-  min-height: 95vh;
-  width: 80%;
-  margin: auto;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-  .cards {
-    display: flex;
-    justify-content: space-between;
-    color: #2de2e6;
 
-    .card {
-      background: #261447;
-      margin: 10rem 3rem 30rem;
-      display: flex;
-      flex-direction: column;
-      text-align: center;
-      h4 {
-        margin: 2rem 0rem 3rem;
-      }
+.card-list {
+  display: flex;
+  overflow-x: hidden;
+  ::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: #201c29;
+    border-radius: 10px;
+    box-shadow: inset 2px 2px 2px hsla(0, 0%, 100%, 0.25),
+      inset -2px -2px 2px rgba(0, 0, 0, 0.25);
+  }
+  ::-webkit-scrollbar-track {
+    background: linear-gradient(90deg, #261447, #141414);
+  }
+  .card {
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    height: 350px;
+    width: 400px;
+    min-width: 250px;
+    padding: 1.5rem;
+    border-radius: 16px;
+    background: #261447;
+    box-shadow: -1rem 0 3rem #141414;
+    transition: 0.2s;
+
+    .card-header {
       p {
-        padding: 3rem;
-        color: #ff3864;
-        background-color: #0d0221;
+        color: #e52e71;
+        font-family: "Roboto", sans-serif;
       }
-      img {
-        object-fit: contain;
-        border-radius: 2rem;
-        overflow: hidden;
+      h1 {
+        color: #2de2e6;
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+          Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
       }
     }
+    .card-authour {
+      position: relative;
+      display: grid;
+      grid-template-columns: 75px 1fr;
+      align-items: center;
+      margin: 3rem 0 0;
+
+      .half-circle {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        top: 15px;
+        width: 40px;
+        height: 48px;
+        fill: none;
+        stroke: #2de2e6;
+        stroke-width: 8;
+        stroke-linecap: round;
+        pointer-events: none;
+      }
+
+      .author-name {
+        grid-area: 1;
+        box-sizing: border-box;
+      }
+
+      .author-name-prefix {
+        font-style: normal;
+        font-weight: 500;
+        color: #bdbdbd;
+      }
+    }
+  }
+
+  .card:hover {
+    transform: translateY(-0.5rem);
+  }
+  .card:hover ~ .card {
+    transform: translateX(130px);
+  }
+  .card:not(:first-child) {
+    margin-left: -130px;
+  }
+
+  .card-header h2:hover {
+    background: linear-gradient(90deg, #2de2e6, #e52e71);
+    text-shadow: none;
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+    background-clip: text;
   }
 }

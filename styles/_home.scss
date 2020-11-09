@@ -8,7 +8,7 @@
 nav {
   width: 80%;
   margin: auto;
-  min-height: 8vh;
+  min-height: 6vh;
   padding: 2rem 0rem;
   display: flex;
   justify-content: space-between;
@@ -23,28 +23,31 @@ nav {
   #logo {
     flex: 2.5;
     position: relative;
+
     &::after {
       content: "";
       position: absolute;
       top: 0;
       left: 0;
-      width: 12rem;
-      height: 7rem;
-      background: #FF3864;
-      border-radius: 80%;
+      width: 13.5rem;
+      height: 5rem;
+      background: #ff3864;
+
+      border-radius: 16px;
       transform: translate(-10%, -20%);
       mix-blend-mode: screen;
     }
   }
   .contactBtn {
-    background: #FF3864;
+    background: #ff3864;
     padding: 1rem 1rem;
-    border-radius: 2rem;
+    border-radius: 16px;
   }
 }
 .pageContent {
   display: grid;
   min-height: 90vh;
+  max-height: 95vh;
   grid-template-columns: 10% repeat(3, minmax(5rem, 1fr)) 10%;
   grid-template-rows: 1fr 2fr 1fr;
 

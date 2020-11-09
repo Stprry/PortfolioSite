@@ -16,20 +16,20 @@ body {
 
 h1 {
   font-size: 2.5rem;
-  font-family: "Shadows Into Light", cursive;
+  font-family: "Roboto", sans-serif;
   font-weight: lighter;
 }
 
 h2 {
   font-size: 6rem;
   font-family: "Shadows Into Light", cursive;
-  color: #2DE2E6;
+  color: #2de2e6;
 }
 
 h3 {
   font-size: 4rem;
   font-family: "Shadows Into Light", cursive;
-  color: #FF3864;
+  color: #ff3864;
 }
 
 h4 {
@@ -60,7 +60,7 @@ a {
 nav {
   width: 80%;
   margin: auto;
-  min-height: 8vh;
+  min-height: 6vh;
   padding: 2rem 0rem;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -98,25 +98,26 @@ nav #logo::after {
   position: absolute;
   top: 0;
   left: 0;
-  width: 12rem;
-  height: 7rem;
-  background: #FF3864;
-  border-radius: 80%;
+  width: 13.5rem;
+  height: 5rem;
+  background: #ff3864;
+  border-radius: 16px;
   -webkit-transform: translate(-10%, -20%);
           transform: translate(-10%, -20%);
   mix-blend-mode: screen;
 }
 
 nav .contactBtn {
-  background: #FF3864;
+  background: #ff3864;
   padding: 1rem 1rem;
-  border-radius: 2rem;
+  border-radius: 16px;
 }
 
 .pageContent {
   display: -ms-grid;
   display: grid;
   min-height: 90vh;
+  max-height: 95vh;
   -ms-grid-columns: 10% (minmax(5rem, 1fr))[3] 10%;
       grid-template-columns: 10% repeat(3, minmax(5rem, 1fr)) 10%;
   -ms-grid-rows: 1fr 2fr 1fr;
@@ -161,66 +162,129 @@ nav .contactBtn {
   padding-bottom: 1rem;
 }
 
-.projects-container {
+.card-container {
   background: -webkit-gradient(linear, left top, left bottom, from(#141414), to(#261447));
   background: linear-gradient(#141414, #261447);
   position: relative;
   z-index: 0;
   overflow: hidden;
+  padding: 5rem;
 }
 
-.projects {
-  min-height: 95vh;
-  width: 80%;
-  margin: auto;
+.card-list {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  overflow-x: hidden;
+}
+
+.card-list ::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
+.card-list ::-webkit-scrollbar-thumb {
+  background: #201c29;
+  border-radius: 10px;
+  -webkit-box-shadow: inset 2px 2px 2px rgba(255, 255, 255, 0.25), inset -2px -2px 2px rgba(0, 0, 0, 0.25);
+          box-shadow: inset 2px 2px 2px rgba(255, 255, 255, 0.25), inset -2px -2px 2px rgba(0, 0, 0, 0.25);
+}
+
+.card-list ::-webkit-scrollbar-track {
+  background: -webkit-gradient(linear, left top, right top, from(#261447), to(#141414));
+  background: linear-gradient(90deg, #261447, #141414);
+}
+
+.card-list .card {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: relative;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
-}
-
-.projects .cards {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  color: #2de2e6;
-}
-
-.projects .cards .card {
+  height: 350px;
+  width: 400px;
+  min-width: 250px;
+  padding: 1.5rem;
+  border-radius: 16px;
   background: #261447;
-  margin: 10rem 3rem 30rem;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  text-align: center;
+  -webkit-box-shadow: -1rem 0 3rem #141414;
+          box-shadow: -1rem 0 3rem #141414;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
 }
 
-.projects .cards .card h4 {
-  margin: 2rem 0rem 3rem;
+.card-list .card .card-header p {
+  color: #e52e71;
+  font-family: "Roboto", sans-serif;
 }
 
-.projects .cards .card p {
-  padding: 3rem;
-  color: #ff3864;
-  background-color: #0d0221;
+.card-list .card .card-header h1 {
+  color: #2de2e6;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
 }
 
-.projects .cards .card img {
-  -o-object-fit: contain;
-     object-fit: contain;
-  border-radius: 2rem;
-  overflow: hidden;
+.card-list .card .card-authour {
+  position: relative;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 75px 1fr;
+      grid-template-columns: 75px 1fr;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 3rem 0 0;
+}
+
+.card-list .card .card-authour .half-circle {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  top: 15px;
+  width: 40px;
+  height: 48px;
+  fill: none;
+  stroke: #2de2e6;
+  stroke-width: 8;
+  stroke-linecap: round;
+  pointer-events: none;
+}
+
+.card-list .card .card-authour .author-name {
+  -ms-grid-row: 1;
+  grid-area: 1;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.card-list .card .card-authour .author-name-prefix {
+  font-style: normal;
+  font-weight: 500;
+  color: #bdbdbd;
+}
+
+.card-list .card:hover {
+  -webkit-transform: translateY(-0.5rem);
+          transform: translateY(-0.5rem);
+}
+
+.card-list .card:hover ~ .card {
+  -webkit-transform: translateX(130px);
+          transform: translateX(130px);
+}
+
+.card-list .card:not(:first-child) {
+  margin-left: -130px;
+}
+
+.card-list .card-header h2:hover {
+  background: -webkit-gradient(linear, left top, right top, from(#2de2e6), to(#e52e71));
+  background: linear-gradient(90deg, #2de2e6, #e52e71);
+  text-shadow: none;
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+  background-clip: text;
 }
 /*# sourceMappingURL=style.css.map */
