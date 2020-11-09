@@ -135,6 +135,7 @@ nav .contactBtn {
   -webkit-text-fill-color: transparent;
   -webkit-background-clip: text;
   -webkit-box-decoration-break: clone;
+  box-decoration-break: clone;
   background-clip: text;
   border-color: white;
 }
@@ -147,9 +148,7 @@ nav .contactBtn {
   -ms-grid-column-span: 5;
   grid-column: 2/7;
   height: 100%;
-  width: -webkit-max-content;
-  width: -moz-max-content;
-  width: max-content;
+  width: 125%;
   -o-object-fit: cover;
      object-fit: cover;
   -ms-flex-item-align: center;
@@ -186,6 +185,7 @@ nav .contactBtn {
   display: -ms-flexbox;
   display: flex;
   overflow-x: hidden;
+  overflow-y: hidden;
 }
 
 .card-list ::-webkit-scrollbar {

@@ -59,6 +59,7 @@ nav {
     -webkit-text-fill-color: transparent;
     -webkit-background-clip: text;
     -webkit-box-decoration-break: clone;
+    box-decoration-break: clone;
     background-clip: text;
     border-color: white;
   }
@@ -67,7 +68,7 @@ nav {
     grid-row: 2/7;
     grid-column: 2/7;
     height: 100%;
-    width: max-content;
+    width: 125%;
     object-fit: cover;
     align-self: center;
     justify-self: center;
