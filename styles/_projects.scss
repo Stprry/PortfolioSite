@@ -52,20 +52,9 @@
       grid-template-columns: 75px 1fr;
       align-items: center;
       margin: 3rem 0 0;
-
-      .half-circle {
-        position: absolute;
-        bottom: 0;
-        left: 0;
-        top: 15px;
-        width: 40px;
-        height: 48px;
-        fill: none;
-        stroke: #2de2e6;
-        stroke-width: 8;
-        stroke-linecap: round;
-        pointer-events: none;
-      }
+      align-self: flex-start;
+      margin-top: auto;
+      padding-bottom: 15px;
 
       .author-name {
         grid-area: 1;
